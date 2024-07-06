@@ -1,0 +1,22 @@
+Node 5 election timer reset
+5 Stepping down
+Node 5 election timer reset
+Vote denied for Node 3 in term 0.
+Vote granted for Node 2 in term 0.
+Node 5 election timer reset
+Node 5 accepted AppendEntries RPC from 2.
+Node 5 election timer reset
+Node 5 accepted AppendEntries RPC from 2.
+Node 5 election timer timed out, Starting election.
+Node 5 election timer timed out, Starting election.
+Node 5 election timer reset
+Vote denied for Node 3 in term 1.
+Node 5 election timer reset
+Vote denied for Node 4 in term 1.
+Node 5 became the leader for term 2.
+Leader 5 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:5002.
+Leader 5 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:5002.
+Leader 5 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:5002.

@@ -1,0 +1,7 @@
+Node 2 election timer timed out, Starting election.
+Node 2 election timer reset
+Vote denied for Node 3 in term 0.
+Node 2 became the leader for term 0.
+Leader 2 sending heartbeat & Renewing Lease
+Leader 2 sending heartbeat & Renewing Lease
+Leader 2 sending heartbeat & Renewing Lease

@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package raft;
+
+service Raft {
+  rpc RequestVote(VoteRequest) returns (VoteResponse) {}
+  rpc Heartbeat(HeartbeatRequest) returns (HeartbeatResponse) {}
+  rpc ClientRequest(ClientRequestMessage) returns (ClientResponseMessage) {}
+  
+}
+
+message VoteRequest {
+  int32 term = 1;
+  int32 candidateId = 2;
+}
+
+message VoteResponse {
+  int32 term = 1;
+  bool voteGranted = 2;
+}
+
+message HeartbeatRequest {
+  int32 leaderId = 8;
+  int32 term = 1;
+  double leaseDuration = 2;  // Lease duration in seconds
+  repeated LogEntry entries = 3;
+  // int32 commit = 4;
+  int32 prevLogIndex = 5;
+  int32 prevLogTerm = 6;
+  int32 leaderCommit = 7;
+}
+
+message HeartbeatResponse {
+  int32 term = 1;
+  bool success = 2;
+}
+
+message ClientRequestMessage {
+  string request = 1;
+}
+
+message ClientResponseMessage {
+  bool success = 1;
+  string message = 2;
+  int32 leaderAddress = 3;  // Address of the current leader, if known
+}
+
+message LogEntry{
+  int32 term = 1;
+  string command = 2;
+}

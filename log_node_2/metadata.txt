@@ -1,0 +1,3 @@
+commitLength: 1
+Term: 0
+VotedFor: 2
